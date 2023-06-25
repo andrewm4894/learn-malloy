@@ -28,6 +28,7 @@ query: survived_by_age_bin_bar_chart is titanic -> {
     order_by: age_bin
 }
 
+// should (TODO: does not seem to render as bar chart) render as bar chart based on titanic.styles.json
 query: n_by_sex is titanic -> {
     group_by: Sex
     aggregate: n
