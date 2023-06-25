@@ -16,11 +16,5 @@
     "language": "malloy",
     "value": "query: titanic -> {\r\n    group_by: Sex\r\n    aggregate: n\r\n}",
     "metadata": {}
-  },
-  {
-    "kind": 2,
-    "language": "malloy",
-    "value": "",
-    "metadata": {}
   }
 ]
