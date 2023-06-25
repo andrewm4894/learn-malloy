@@ -8,7 +8,19 @@
   {
     "kind": 2,
     "language": "malloy",
-    "value": "query: survived_by_sex is titanic -> {\r\n    group_by: Sex\r\n    aggregate: n, survived, survived_rate\r\n}",
+    "value": "//query: survived_by_sex is titanic -> {\r\n//    group_by: Sex\r\n//    aggregate: n, survived, survived_rate\r\n//}\r\n\r\n// survived_by_sex\r\nquery: titanic -> {\r\n    group_by: Sex\r\n    aggregate: n, survived, survived_rate\r\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "malloy",
+    "value": "query: titanic -> {\r\n    group_by: Sex\r\n    aggregate: n\r\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "malloy",
+    "value": "",
     "metadata": {}
   }
 ]
