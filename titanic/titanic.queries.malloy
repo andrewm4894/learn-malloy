@@ -1,20 +1,20 @@
 import "titanic.source.malloy"
 
 // a simple query
-query: titanic -> {
+query: survived_by_sex is titanic -> {
     group_by: Sex
     aggregate: n, survived, survived_rate
 }
 
 // simple query using a derived dimension
-query: titanic -> {
+query: survived_by_age_bin is titanic -> {
     group_by: age_bin
     aggregate: n, survived, survived_rate
     order_by: age_bin
 }
 
 // multiple group by
-query: titanic -> {
+query: survived_by_sex_by_age is titanic -> {
     group_by: Sex, age_bin
     aggregate: n, survived, survived_rate
     order_by: survived_rate desc
@@ -22,13 +22,13 @@ query: titanic -> {
 }
 
 // adding _bar_chart suffix will make it render as a bar chart
-query: titanic -> {
+query: survived_by_age_bin_bar_chart is titanic -> {
     group_by: age_bin
     aggregate: survived_rate
     order_by: age_bin
 }
 
-query: titanic -> {
+query: n_by_sex is titanic -> {
     group_by: Sex
     aggregate: n
 }
